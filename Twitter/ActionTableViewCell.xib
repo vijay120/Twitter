@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="ActionTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="reply.png" translatesAutoresizingMaskIntoConstraints="NO" id="Em4-0j-uUI">
+                        <rect key="frame" x="8" y="14" width="19" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="16" id="4Uu-GC-BW6"/>
+                            <constraint firstAttribute="width" constant="19" id="6k9-Wk-QXI"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="retweet.png" translatesAutoresizingMaskIntoConstraints="NO" id="LpC-aH-sPM">
+                        <rect key="frame" x="151" y="14" width="19" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="16" id="dJJ-fe-lZK"/>
+                            <constraint firstAttribute="width" constant="19" id="uaY-Hb-11b"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="favorite.png" translatesAutoresizingMaskIntoConstraints="NO" id="eMd-OJ-ZG1">
+                        <rect key="frame" x="294" y="14" width="19" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="19" id="QMf-We-deJ"/>
+                            <constraint firstAttribute="height" constant="16" id="xpZ-22-OmY"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="eMd-OJ-ZG1" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="14" id="1mk-BI-eL6"/>
+                    <constraint firstItem="Em4-0j-uUI" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="14" id="EqJ-ho-AbR"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="LpC-aH-sPM" secondAttribute="bottom" constant="2" id="WM2-Kj-49V"/>
+                    <constraint firstItem="LpC-aH-sPM" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="14" id="fPW-Be-7tj"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="eMd-OJ-ZG1" secondAttribute="trailing" constant="2" id="kRo-Im-jFA"/>
+                    <constraint firstItem="Em4-0j-uUI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="lCj-tl-2Fs"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Em4-0j-uUI" secondAttribute="bottom" constant="14" id="nYV-xA-IE1"/>
+                    <constraint firstItem="LpC-aH-sPM" firstAttribute="leading" secondItem="Em4-0j-uUI" secondAttribute="trailing" constant="124" id="seV-Oz-pKY"/>
+                    <constraint firstItem="eMd-OJ-ZG1" firstAttribute="leading" secondItem="LpC-aH-sPM" secondAttribute="trailing" constant="124" id="uIp-2Y-f52"/>
+                </constraints>
+            </tableViewCellContentView>
+            <gestureRecognizers/>
+            <connections>
+                <outlet property="favorite" destination="eMd-OJ-ZG1" id="BeW-cG-Gif"/>
+                <outlet property="reply" destination="Em4-0j-uUI" id="zvh-WY-VnO"/>
+                <outlet property="retweet" destination="LpC-aH-sPM" id="CWz-22-fPC"/>
+            </connections>
+            <point key="canvasLocation" x="139" y="154"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="favorite.png" width="16" height="16"/>
+        <image name="reply.png" width="16" height="16"/>
+        <image name="retweet.png" width="19" height="16"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
