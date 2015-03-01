@@ -27,6 +27,7 @@
     // Do any additional setup after loading the view from its nib.
     self.textView.delegate = self;
     
+    NSLog(@"In the tweets controller");
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Cancel" style:UIBarButtonItemStylePlain target:self action:@selector(onCancel)];
     self.tweetButton = [[UIBarButtonItem alloc] initWithTitle:@"Tweet" style:UIBarButtonItemStylePlain target:self action:@selector(noOp)];
     self.navigationItem.rightBarButtonItem = self.tweetButton;

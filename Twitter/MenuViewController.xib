@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MenuViewController">
@@ -27,6 +28,23 @@
                 <constraint firstAttribute="bottom" secondItem="asi-8a-FIA" secondAttribute="bottom" id="xWU-70-seA"/>
             </constraints>
             <point key="canvasLocation" x="353" y="283"/>
+        </view>
+        <view contentMode="scaleToFill" id="7qv-50-G6v">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vNg-PM-lYq">
+                    <rect key="frame" x="16" y="16" width="288" height="536"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="vNg-PM-lYq" firstAttribute="top" secondItem="7qv-50-G6v" secondAttribute="topMargin" constant="8" id="hYh-pt-p7O"/>
+                <constraint firstAttribute="bottomMargin" secondItem="vNg-PM-lYq" secondAttribute="bottom" constant="8" id="oXn-hl-dJU"/>
+                <constraint firstAttribute="trailingMargin" secondItem="vNg-PM-lYq" secondAttribute="trailing" constant="8" id="ya7-Ke-Szg"/>
+                <constraint firstItem="vNg-PM-lYq" firstAttribute="leading" secondItem="7qv-50-G6v" secondAttribute="leadingMargin" constant="8" id="za1-kD-6O7"/>
+            </constraints>
+            <point key="canvasLocation" x="353" y="893"/>
         </view>
     </objects>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

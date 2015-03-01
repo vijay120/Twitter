@@ -51,8 +51,14 @@
         [cell.button setTitle:@"Your Mentions" forState:UIControlStateNormal];
         [cell.button addTarget:self action:@selector(mentionsButtonClicked:) forControlEvents:UIControlEventTouchDown];
     }
+    
     return cell;
 }
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    return @"My title";
+}
+
 
 -(void) profileButtonClicked:(UIButton*)sender
 {

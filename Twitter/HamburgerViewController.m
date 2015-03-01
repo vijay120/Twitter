@@ -33,7 +33,12 @@
     [super viewDidLoad];
     self.mc = [[MenuViewController alloc] init];
     self.tc = [[TweetsViewController alloc] init];
-    self.nav = [[UINavigationController alloc] initWithRootViewController:self];
+    self.nav = [[UINavigationController alloc] initWithRootViewController:self.tc];
+    
+    [self addChildViewController:self.nav];
+    self.nav.view.frame = self.containerView.frame;
+    [self.containerView addSubview:self.nav.view];
+    [self.nav didMoveToParentViewController:self];
     
     [self addChildViewController:self.mc];
     self.mc.view.frame = self.containerView.frame;
@@ -44,10 +49,6 @@
     self.tc.view.frame = self.containerView.frame;
     [self.containerView addSubview:self.tc.view];
     [self.tc didMoveToParentViewController:self];
-    
-    [self.tc addChildViewController:self.nav];
-    [self.tc.view addSubview:self.nav.view];
-    [self.nav didMoveToParentViewController:self.tc];
     
     self.tc.panGesture.delegate = self;
 }
