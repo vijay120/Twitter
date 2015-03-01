@@ -15,7 +15,6 @@
     self = [super init];
     
     if (self) {
-        NSLog(@"dictionary value is: %@", dictionary);
         self.text = dictionary[@"text"];
         self.user = [[User alloc] initWithDictionary: dictionary[@"user"]];
         NSString* createdAtString = dictionary[@"created_at"];

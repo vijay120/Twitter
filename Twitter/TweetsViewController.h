@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface TweetsViewController : UIViewController
-
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *leadingSpace;
+@property (strong, nonatomic) IBOutlet UIPanGestureRecognizer *panGesture;
 @end

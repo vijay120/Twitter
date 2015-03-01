@@ -14,12 +14,15 @@
 #import "UIRefreshControl+AFNetworking.h"
 #import "TweetViewController.h"
 #import "ShowTweetViewController.h"
+#import "MenuViewController.h"
+#import "HamburgerViewController.h"
 
-@interface TweetsViewController () <UITableViewDelegate, UITableViewDataSource>
+@interface TweetsViewController () <UITableViewDelegate, UITableViewDataSource, UIGestureRecognizerDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) UIRefreshControl *refreshControl;
 @property (nonatomic, strong) NSArray *tweets;
-
+@property (nonatomic, strong) MenuViewController *mc;
+- (IBAction)panGesture:(UIPanGestureRecognizer *)sender;
 @end
 
 @implementation TweetsViewController
@@ -36,7 +39,8 @@
     
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.estimatedRowHeight = 100;
-
+    
+    self.mc = [[MenuViewController alloc] init];
     
     [self.tableView registerNib:[UINib nibWithNibName:@"TweetTableViewCell" bundle:nil] forCellReuseIdentifier:@"TweetTableViewCell"];
     
@@ -98,6 +102,11 @@
     [self presentViewController:nvc animated:YES completion:nil];
 }
 
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer
+{
+    return YES;
+}
+
 /*
 #pragma mark - Navigation
 
@@ -107,5 +116,10 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (IBAction)panGesture:(UIPanGestureRecognizer *)sender {
+    NSLog(@"panned");
+}
+
 
 @end

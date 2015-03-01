@@ -4,12 +4,11 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TweetsViewController">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HamburgerViewController">
             <connections>
-                <outlet property="leadingSpace" destination="DgC-ei-lEz" id="Dbm-xz-zbH"/>
-                <outlet property="panGesture" destination="X4n-9b-Qlk" id="VF0-Xk-Tf7"/>
-                <outlet property="tableView" destination="yBh-zI-tAP" id="0B7-5u-bkG"/>
-                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="containerView" destination="W2z-Kb-vbF" id="nog-cZ-hmS"/>
+                <outlet property="panGesture" destination="19q-zb-ybi" id="U7S-8K-Qqk"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="Rsc-og-8EI"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -17,27 +16,27 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="yBh-zI-tAP">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W2z-Kb-vbF">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                </tableView>
+                </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <gestureRecognizers/>
             <constraints>
-                <constraint firstItem="yBh-zI-tAP" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="DgC-ei-lEz"/>
-                <constraint firstItem="yBh-zI-tAP" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="HtZ-gZ-sQ8"/>
-                <constraint firstAttribute="trailing" secondItem="yBh-zI-tAP" secondAttribute="trailing" id="enK-Rc-g7K"/>
-                <constraint firstAttribute="bottom" secondItem="yBh-zI-tAP" secondAttribute="bottom" id="qdN-RE-tgU"/>
+                <constraint firstItem="W2z-Kb-vbF" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="MfM-Y0-dNl"/>
+                <constraint firstAttribute="trailing" secondItem="W2z-Kb-vbF" secondAttribute="trailing" id="b73-Mr-lL8"/>
+                <constraint firstAttribute="bottom" secondItem="W2z-Kb-vbF" secondAttribute="bottom" id="ozh-hj-Zyh"/>
+                <constraint firstItem="W2z-Kb-vbF" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="saw-C7-lLz"/>
             </constraints>
             <connections>
-                <outletCollection property="gestureRecognizers" destination="X4n-9b-Qlk" appends="YES" id="wrs-Ba-J3s"/>
+                <outletCollection property="gestureRecognizers" destination="19q-zb-ybi" appends="YES" id="pYv-Ae-3cy"/>
             </connections>
-            <point key="canvasLocation" x="483" y="264"/>
+            <point key="canvasLocation" x="443" y="283"/>
         </view>
-        <panGestureRecognizer minimumNumberOfTouches="1" id="X4n-9b-Qlk">
+        <panGestureRecognizer minimumNumberOfTouches="1" id="19q-zb-ybi">
             <connections>
-                <action selector="panGesture:" destination="-1" id="2yf-Up-nnI"/>
+                <action selector="onPanGesture:" destination="-1" id="pdk-OS-pfs"/>
             </connections>
         </panGestureRecognizer>
     </objects>
