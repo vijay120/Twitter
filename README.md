@@ -11,7 +11,7 @@ Time spent: 17
 - [x] The menu can look similar to the LinkedIn menu below or feel free to take liberty with the UI.
 - [x] Contains the user header view
 - [x] Contains a section with the users basic stats: # tweets, # following, # followers
-- [] Tapping on a user image should bring up that user's profile page
+- [ ] Tapping on a user image should bring up that user's profile page
 
 ### Optionals
 
