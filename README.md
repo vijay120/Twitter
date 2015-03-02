@@ -1,3 +1,25 @@
+Twitter Part 2
+
+This is the second part of implementation for the Twitter app.
+
+Time spent: 17
+
+### Required
+
+- [x] Dragging anywhere in the view should reveal the menu.
+- [x] The menu should include links to your profile, the home timeline, and the mentions view.
+- [x] The menu can look similar to the LinkedIn menu below or feel free to take liberty with the UI.
+- [x] Contains the user header view
+- [x] Contains a section with the users basic stats: # tweets, # following, # followers
+- [] Tapping on a user image should bring up that user's profile page
+
+### Optionals
+
+No optionals done.
+
+### Walkthrough
+
+![Video Walkthrough](http://i.imgur.com/1MPcjCo.gif)
 
 This is a basic twitter app to read and compose tweets the [Twitter API](https://apps.twitter.com/).
 

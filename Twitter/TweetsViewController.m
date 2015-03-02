@@ -22,7 +22,6 @@
 @property (nonatomic, strong) UIRefreshControl *refreshControl;
 @property (nonatomic, strong) NSArray *tweets;
 @property (nonatomic, strong) MenuViewController *mc;
-- (IBAction)panGesture:(UIPanGestureRecognizer *)sender;
 @end
 
 @implementation TweetsViewController
@@ -119,9 +118,7 @@
 }
 */
 
-- (IBAction)panGesture:(UIPanGestureRecognizer *)sender {
-    NSLog(@"panned");
-}
+
 
 
 @end

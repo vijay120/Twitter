@@ -29,6 +29,11 @@ NSString * const UserDidLogoutNotification = @"UserDidLogoutNotification";
         self.screenName = dictionary[@"screen_name"];
         self.profileImageUrl = dictionary[@"profile_image_url"];
         self.tagLine = dictionary[@"description"];
+        self.bannerUrl = dictionary[@"profile_banner_url"];
+        self.followCount = dictionary[@"followers_count"];
+        NSLog(@"followers count %@", dictionary[@"followers_count"]);
+        NSLog(@"following count %@", dictionary[@"following"]);
+        self.followingCount = dictionary[@"following"];
     }
     return self;
 }
@@ -58,6 +63,16 @@ NSString *const kCurrentUserKey = @"kCurrentUserKey";
         [[NSUserDefaults standardUserDefaults] setObject:nil forKey:kCurrentUserKey];
     }
     [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
++ (NSArray *) usersWithArray: (NSArray *) array {
+    NSMutableArray *users = [NSMutableArray array];
+    
+    for (NSDictionary *dictionary in array) {
+        [users addObject:[[User alloc] initWithDictionary:dictionary]];
+    }
+    
+    return users;
 }
 
 +(void)logout {

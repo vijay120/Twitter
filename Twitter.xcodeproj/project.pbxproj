@@ -22,6 +22,12 @@
 		373F3CC11A9F8A9500906F99 /* HamburgerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 373F3CBF1A9F8A9500906F99 /* HamburgerViewController.xib */; };
 		3741614A1AA2335700439FA9 /* MenuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 374161481AA2335700439FA9 /* MenuTableViewCell.m */; };
 		3741614B1AA2335700439FA9 /* MenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 374161491AA2335700439FA9 /* MenuTableViewCell.xib */; };
+		3741614F1AA3138800439FA9 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3741614D1AA3138800439FA9 /* ProfileViewController.m */; };
+		374161501AA3138800439FA9 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3741614E1AA3138800439FA9 /* ProfileViewController.xib */; };
+		374161541AA3E45200439FA9 /* UserTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 374161521AA3E45200439FA9 /* UserTableViewCell.m */; };
+		374161551AA3E45200439FA9 /* UserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 374161531AA3E45200439FA9 /* UserTableViewCell.xib */; };
+		374161591AA4095000439FA9 /* MentionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 374161571AA4095000439FA9 /* MentionsViewController.m */; };
+		3741615A1AA4095000439FA9 /* MentionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 374161581AA4095000439FA9 /* MentionsViewController.xib */; };
 		3747EF561A9B34DC001452E1 /* retweet_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 3747EF551A9B34DC001452E1 /* retweet_on.png */; };
 		3747EF5A1A9D5D93001452E1 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3747EF581A9D5D93001452E1 /* MenuViewController.m */; };
 		3747EF5B1A9D5D93001452E1 /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3747EF591A9D5D93001452E1 /* MenuViewController.xib */; };
@@ -79,6 +85,15 @@
 		374161471AA2335700439FA9 /* MenuTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuTableViewCell.h; sourceTree = "<group>"; };
 		374161481AA2335700439FA9 /* MenuTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuTableViewCell.m; sourceTree = "<group>"; };
 		374161491AA2335700439FA9 /* MenuTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuTableViewCell.xib; sourceTree = "<group>"; };
+		3741614C1AA3138800439FA9 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		3741614D1AA3138800439FA9 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
+		3741614E1AA3138800439FA9 /* ProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+		374161511AA3E45200439FA9 /* UserTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserTableViewCell.h; sourceTree = "<group>"; };
+		374161521AA3E45200439FA9 /* UserTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserTableViewCell.m; sourceTree = "<group>"; };
+		374161531AA3E45200439FA9 /* UserTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserTableViewCell.xib; sourceTree = "<group>"; };
+		374161561AA4095000439FA9 /* MentionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MentionsViewController.h; sourceTree = "<group>"; };
+		374161571AA4095000439FA9 /* MentionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MentionsViewController.m; sourceTree = "<group>"; };
+		374161581AA4095000439FA9 /* MentionsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MentionsViewController.xib; sourceTree = "<group>"; };
 		3747EF551A9B34DC001452E1 /* retweet_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = retweet_on.png; sourceTree = "<group>"; };
 		3747EF571A9D5D93001452E1 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
 		3747EF581A9D5D93001452E1 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
@@ -157,6 +172,12 @@
 				373F3CBD1A9F8A9500906F99 /* HamburgerViewController.h */,
 				373F3CBE1A9F8A9500906F99 /* HamburgerViewController.m */,
 				373F3CBF1A9F8A9500906F99 /* HamburgerViewController.xib */,
+				3741614C1AA3138800439FA9 /* ProfileViewController.h */,
+				3741614D1AA3138800439FA9 /* ProfileViewController.m */,
+				3741614E1AA3138800439FA9 /* ProfileViewController.xib */,
+				374161561AA4095000439FA9 /* MentionsViewController.h */,
+				374161571AA4095000439FA9 /* MentionsViewController.m */,
+				374161581AA4095000439FA9 /* MentionsViewController.xib */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -254,6 +275,9 @@
 				374161471AA2335700439FA9 /* MenuTableViewCell.h */,
 				374161481AA2335700439FA9 /* MenuTableViewCell.m */,
 				374161491AA2335700439FA9 /* MenuTableViewCell.xib */,
+				374161511AA3E45200439FA9 /* UserTableViewCell.h */,
+				374161521AA3E45200439FA9 /* UserTableViewCell.m */,
+				374161531AA3E45200439FA9 /* UserTableViewCell.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -380,6 +404,7 @@
 				37F3827D1A995AA700878B9F /* retweet.png in Resources */,
 				372745F91A9AB20800D9ADCD /* ShowTweetViewController.xib in Resources */,
 				372B0AC81A9ADE0D003E931A /* StatsTableViewCell.xib in Resources */,
+				374161551AA3E45200439FA9 /* UserTableViewCell.xib in Resources */,
 				373F3CC11A9F8A9500906F99 /* HamburgerViewController.xib in Resources */,
 				372B0AB91A9AC1F9003E931A /* retweet_hover.png in Resources */,
 				372745F41A9A9EEB00D9ADCD /* TweetViewController.xib in Resources */,
@@ -388,6 +413,8 @@
 				3747EF561A9B34DC001452E1 /* retweet_on.png in Resources */,
 				37C8B6061A945B3F0068C08B /* LoginViewController.xib in Resources */,
 				3747EF5B1A9D5D93001452E1 /* MenuViewController.xib in Resources */,
+				3741615A1AA4095000439FA9 /* MentionsViewController.xib in Resources */,
+				374161501AA3138800439FA9 /* ProfileViewController.xib in Resources */,
 				37F3827B1A995AA700878B9F /* favorite.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -441,6 +468,7 @@
 			files = (
 				37C8B6091A945C050068C08B /* TwitterClient.m in Sources */,
 				372B0ABD1A9ACB23003E931A /* StatusTableViewCell.m in Sources */,
+				374161541AA3E45200439FA9 /* UserTableViewCell.m in Sources */,
 				37C8B5E21A9459230068C08B /* AppDelegate.m in Sources */,
 				37C8B6101A95BF880068C08B /* User.m in Sources */,
 				372745F31A9A9EEB00D9ADCD /* TweetViewController.m in Sources */,
@@ -448,7 +476,9 @@
 				3741614A1AA2335700439FA9 /* MenuTableViewCell.m in Sources */,
 				372745F81A9AB20800D9ADCD /* ShowTweetViewController.m in Sources */,
 				37C8B60D1A95BF770068C08B /* Tweet.m in Sources */,
+				3741614F1AA3138800439FA9 /* ProfileViewController.m in Sources */,
 				37C8B5DF1A9459230068C08B /* main.m in Sources */,
+				374161591AA4095000439FA9 /* MentionsViewController.m in Sources */,
 				372B0AC71A9ADE0D003E931A /* StatsTableViewCell.m in Sources */,
 				372B0AC21A9ADBD3003E931A /* ActionTableViewCell.m in Sources */,
 				3747EF5A1A9D5D93001452E1 /* MenuViewController.m in Sources */,

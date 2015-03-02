@@ -8,17 +8,29 @@
 
 #import "MenuViewController.h"
 #import "MenuTableViewCell.h"
+#import "TwitterClient.h"
+#import "User.h"
+#import "UIImageView+AFNetworking.h"
+#import "ProfileViewController.h"
+#import "HamburgerViewController.h"
+#import "ProfileViewController.h"
+#import "TweetsViewController.h"
+#import "MentionsViewController.h"
 
 @interface MenuViewController () <UITableViewDelegate, UITableViewDataSource>
+@property (strong, nonatomic) IBOutlet UIView *profileDetailsView;
+@property (weak, nonatomic) IBOutlet UIImageView *profilePic;
+@property (weak, nonatomic) IBOutlet UILabel *name;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (nonatomic, strong) UINavigationController* nav;
+@property (weak, nonatomic) IBOutlet UILabel *handle;
 @end
 
 @implementation MenuViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSLog(@"I got triggered in the menu controller");
-    // Do any additional setup after loading the view from its nib.
+    [self.nav didMoveToParentViewController:self];
     
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
@@ -42,13 +54,13 @@
     MenuTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MenuTableViewCell"];
     
     if (indexPath.row == 0) {
-        [cell.button setTitle:@"Your Profile" forState:UIControlStateNormal];
+        [cell.button setTitle:@"Profile" forState:UIControlStateNormal];
         [cell.button addTarget:self action:@selector(profileButtonClicked:) forControlEvents:UIControlEventTouchDown];
     } else if (indexPath.row == 1) {
-        [cell.button setTitle:@"Home Timeline" forState:UIControlStateNormal];
+        [cell.button setTitle:@"Timeline" forState:UIControlStateNormal];
         [cell.button addTarget:self action:@selector(timelineButtonClicked:) forControlEvents:UIControlEventTouchDown];
     } else if (indexPath.row == 2) {
-        [cell.button setTitle:@"Your Mentions" forState:UIControlStateNormal];
+        [cell.button setTitle:@"Mentions" forState:UIControlStateNormal];
         [cell.button addTarget:self action:@selector(mentionsButtonClicked:) forControlEvents:UIControlEventTouchDown];
     }
     
@@ -59,23 +71,40 @@
     return @"My title";
 }
 
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    [self.profilePic setImageWithURL:[NSURL URLWithString:[User currentUser].profileImageUrl]];
+    self.name.text = [User currentUser].name;
+    self.handle.text = [@"@" stringByAppendingString:[User currentUser].screenName];
+    return self.profileDetailsView;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return 80;
+}
 
 -(void) profileButtonClicked:(UIButton*)sender
 {
-    NSLog(@"you clicked on button");
+    ProfileViewController* profileViewController = [[ProfileViewController alloc] init];
+    self.nav = [[UINavigationController alloc] initWithRootViewController:profileViewController];
+    HamburgerViewController* parentVc = (HamburgerViewController*)[self parentViewController];
+    [parentVc startControllerLifecycle:profileViewController];
+    [parentVc setTableViewInFocus:profileViewController];
+    [parentVc setTableViewInFocus:self.nav];
 }
 
 -(void) timelineButtonClicked:(UIButton*)sender
 {
-    NSLog(@"you clicked on button");
-    
+    HamburgerViewController* parentVc = (HamburgerViewController*)[self parentViewController];
+    [parentVc viewDidLoad];
 }
 
 -(void) mentionsButtonClicked:(UIButton*)sender
 {
-    NSLog(@"you clicked on button");
+    MentionsViewController* profileViewController = [[MentionsViewController alloc] init];
+    HamburgerViewController* parentVc = (HamburgerViewController*)[self parentViewController];
+    [parentVc startControllerLifecycle:profileViewController];
+    [parentVc setTableViewInFocus:profileViewController];
 }
-
 
 /*
 #pragma mark - Navigation

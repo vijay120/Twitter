@@ -28,17 +28,19 @@
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(userDidLogout) name:UserDidLogoutNotification object:nil];
     
-//    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[HamburgerViewController alloc] init]];
+    //self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[HamburgerViewController alloc] init]];
 
     self.window.rootViewController = [[HamburgerViewController alloc] init];
     
-//    User *user = [User currentUser];
-//    if (user != nil) {
-//        NSLog(@"Welcome twitter %@", user.name);
-//        self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[TweetsViewController alloc] init]];
-//    } else {
-//        self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[LoginViewController alloc] init]];
-//    }
+    User *user = [User currentUser];
+    if (user != nil) {
+        NSLog(@"Welcome twitter %@", user.name);
+//        self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[HamburgerViewController alloc] init]];
+        self.window.rootViewController = [[HamburgerViewController alloc] init];
+
+    } else {
+        self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[LoginViewController alloc] init]];
+    }
     
     [self.window makeKeyAndVisible];
     return YES;

@@ -79,6 +79,46 @@ NSString * const kTwitterBaseUrl = @"https://api.twitter.com";
     }];
 }
 
+- (void) mentionsWithParams: (NSDictionary *)params complete:(void (^)(NSArray *tweets, NSError *error)) completion {
+    [self GET:@"1.1/statuses/mentions_timeline.json" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSLog(@"mentions is %@", responseObject);
+        NSArray *tweets = [Tweet tweetsWithArray:responseObject];
+        completion(tweets, nil);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        completion(nil, error);
+    }];
+}
+
+- (void) myFollowersWithParams: (NSDictionary *)params complete:(void (^)(NSArray *tweets, NSError *error)) completion {
+    [self GET:@"1.1/followers/list.json" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSLog(@"my followers are: %@", responseObject[@"users"]);
+        NSArray *users = [User usersWithArray:responseObject[@"users"]];
+        completion(users, nil);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        completion(nil, error);
+    }];
+}
+
+- (void) myFriendsWithParams: (NSDictionary *)params complete:(void (^)(NSArray *users, NSError *error)) completion {
+    [self GET:@"1.1/friends/list.json" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSArray *users = [User usersWithArray:responseObject[@"users"]];
+        completion(users, nil);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        completion(nil, error);
+    }];
+}
+
+- (void) myTweetWithParams: (NSDictionary *)params complete:(void (^)(NSArray *tweets, NSError *error)) completion {
+    [self GET:@"1.1/statuses/user_timeline.json" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSArray *tweets = [Tweet tweetsWithArray:responseObject];
+        completion(tweets, nil);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        completion(nil, error);
+    }];
+}
+
+
+
 - (void) postStatus: (NSDictionary *)params complete:(void (^)(NSError *error)) completion {
     [self POST:@"1.1/statuses/update.json" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
         completion(nil);

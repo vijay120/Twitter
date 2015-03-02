@@ -25,11 +25,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *retweetCount;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *imageHeightProperty;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *retweetHeightProperty;
-
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *retweetTextBottomHeight1;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *retweetTextBottomHeight2;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *retweetTextBottomHeight3;
-
 
 @end
 
@@ -68,7 +66,6 @@
     }
 }
 
-
 -(NSString *)dateFormatter: (NSDate *) dateArg {
     NSDate *now = [[NSDate alloc] init];
     NSTimeInterval distanceBetweenDatesInSeconds = [now timeIntervalSinceDate:dateArg];
@@ -85,7 +82,11 @@
         int finalVal = (int)distanceBetweenDatesInSeconds / 3600;
         return [NSString stringWithFormat:@"%d h", finalVal];
     } else {
-        return [NSString stringWithFormat:@"%@", dateArg];
+        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+        //dateFromString = [dateFormatter dateFromString:dateArg];
+        dateFormatter.dateFormat = @"MM-dd";
+        NSString *newDateString = [dateFormatter stringFromDate:dateArg];
+        return [NSString stringWithFormat:@"%@", newDateString];
     }
 }
 

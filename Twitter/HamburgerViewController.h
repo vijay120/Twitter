@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface HamburgerViewController : UIViewController
-
+- (void) setTableViewInFocus: (UIViewController*) vc;
+- (void) startControllerLifecycle: (UIViewController*) vc;
 @end

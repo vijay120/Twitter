@@ -17,5 +17,8 @@
 - (void) postStatus: (NSDictionary *)params complete:(void (^)(NSError *error)) completion;
 - (void) postFavorite: (NSDictionary *)params complete:(void (^)(NSError *error)) completion;
 - (void) postRetweet: (NSDictionary *)params complete:(void (^)(NSError *error)) completion;
-
+- (void) myTweetWithParams: (NSDictionary *)params complete:(void (^)(NSArray *tweets, NSError *error)) completion;
+- (void) myFollowersWithParams: (NSDictionary *)params complete:(void (^)(NSArray *users, NSError *error)) completion;
+- (void) myFriendsWithParams: (NSDictionary *)params complete:(void (^)(NSArray *users, NSError *error)) completion;
+- (void) mentionsWithParams: (NSDictionary *)params complete:(void (^)(NSArray *tweets, NSError *error)) completion;
 @end
